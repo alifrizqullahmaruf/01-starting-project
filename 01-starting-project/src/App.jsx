@@ -4,6 +4,9 @@ import CoreConcept from './components/CoreConcepts.jsx';
 import TabLayout from './components/TabLayout.jsx';
 
 function App() {
+  function handleSelect(){
+    console.log("Hello World -selected")
+  }
   return (
     <div>
       <Header />
@@ -24,11 +27,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabLayout>Components</TabLayout>
-            <TabLayout>JSX</TabLayout>
-            <TabLayout>Props</TabLayout>
-            <TabLayout>State</TabLayout>
+            <TabLayout onSelect={handleSelect}>Components</TabLayout>
+            <TabLayout onSelect={handleSelect}>JSX</TabLayout>
+            <TabLayout onSelect={handleSelect}>Props</TabLayout>
+            <TabLayout onSelect={handleSelect}>State</TabLayout>
           </menu>
+          
         </section>
       </main>
     </div>

@@ -1,7 +1,8 @@
-export default function TabLayout({ children }) {
+export default function TabLayout({ children ,onSelect}) {
+
   return (
     <li>
-      <button>{children}</button>
+      <button onClick={onSelect}>{children}</button>
     </li>
   );
 }
